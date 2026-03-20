@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { DM_Serif_Display, DM_Sans } from "next/font/google";
+import { Funnel_Display, DM_Sans } from "next/font/google";
 import "./globals.css";
 
-const dmSerifDisplay = DM_Serif_Display({
-  variable: "--font-dm-serif-display",
+const funnelDisplay = Funnel_Display({
+  variable: "--font-funnel-display",
   subsets: ["latin"],
-  weight: "400",
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 const dmSans = DM_Sans({
@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html
       lang="no"
-      className={`${dmSerifDisplay.variable} ${dmSans.variable} h-full antialiased`}
+      className={`${funnelDisplay.variable} ${dmSans.variable} h-full antialiased`}
     >
       <body className="font-body min-h-full flex flex-col">{children}</body>
     </html>
